@@ -85,11 +85,88 @@ O sistema opera em torno de três conceitos centrais: **Usuários**, **Projetos*
 * Um **Pacote** representa um serviço de construção pré-definido (ex: "Reforma de Luxo"), com escopo, preço base e cronograma definidos.
 * Um **Projeto** é criado quando um `Cliente` solicita um `Pacote`. O projeto conterá todas as informações associadas, incluindo dados do cliente, endereço, pacote escolhido, documentos, atualizações de status e histórico de comunicação. Ele conecta o cliente à equipe de profissionais designada.
 
-https://github.com/dancoutto/easingLiving/releases/download/image/Captura.de.tela.2025-09-15.205254.png
-sha256:627bb0dfa5e95bb4aa904bd821866444c5a0a70c4b01502f8d0cc9aa6f49e852
+_________________________________________________________________________________________________________________________________________
 
-### 7.2. Modelo Entidade-Relacionamento (Básico)
+# EasingLiving - Project README
 
-https://github.com/dancoutto/easingLiving/releases/download/image/Captura.de.tela.2025-09-15.205306.png
+## 1. Project Overview
 
-__________________________________________________________________________________________________________________________________________
+**EasingLiving** is a web platform designed to make life easier for clients interested in residential or commercial construction. The project's ultimate goal is to act as an intermediary between the client and the teams responsible for executing the project—engineers, architects, and service providers.
+
+The platform will offer pre-defined construction packages (mid-standard, high-end, and luxury) and will handle all the bureaucratic aspects involved, such as documentation, licensing, and progress monitoring. The goal is to ensure convenience, transparency, and security for the client.
+
+## 2. Team
+
+* Daniel Braga Alves do Couto - 62312771
+* Gabriel Mendes Bitencourt - 62321162
+* Giovanna Monteiro Rocha - 62320643
+* Hugo Gonçalves Costa - 62321289
+* Yasmim Vitória Soares Pereira - 62313109
+
+## 3. The Problem: The Client's Perspective
+
+Currently, those looking to build or renovate face many challenges:
+* **Lack of Time:** Difficulty dealing with bureaucratic documentation and licensing.
+* **Search for Professionals:** Difficulty finding trustworthy and qualified professionals.
+* **Budgets:** Excessive variations in budgets and lack of clarity about final costs.
+* **Lack of Transparency:** Insecurity regarding the quality of service, adherence to deadlines, and project monitoring.
+
+Despite the constant demand for construction and renovation projects, the process is still seen as complicated, time-consuming, and full of unexpected issues.
+
+## 4. The Solution: Proposed Platform
+
+The team proposes the creation of a web platform that connects clients with construction professionals, offering pre-defined construction packages and centralizing all bureaucratic processes in a practical and transparent manner.
+
+The proposed system will simplify the contracting and construction execution process, eliminating uncertainty and bureaucracy for the client. The platform centralizes information, increases transparency, reduces communication errors, and will help the company position itself as a reliable, modern, and practical solution, strengthening the relationship of trust with the market.
+
+## 5. Main Features
+
+Based on the client's needs and the proposed solution, the platform will include:
+
+* **Client and Professional Registration:** Profiles for clients and service providers (engineers, architects, and construction teams). * **Construction Package Selection:** The client can choose from predefined packages (medium, high, luxury), with clear pricing and scope details to facilitate decision-making.
+* **Online Monitoring Dashboard:** A dashboard that allows the client to track the progress of the project in real time, including deadlines and completed stages, increasing confidence in the service.
+* **Document and License Management:** The platform will organize all necessary documentation, with uploads and status tracking, preventing the client from wasting time on bureaucracy.
+* **Integrated Communication:** A direct communication channel to ensure that questions and adjustments are resolved quickly between the client and the team.
+* **Online Estimating and Payments:** Clear presentation of costs, with the convenience of making payments through the platform itself to avoid financial surprises.
+
+---
+## 6. System Requirements
+
+### 6.1. Functional Requirements
+
+The following functionalities are specified for the platform, categorized by priority: (M) Must / (S) Should / (C) Could.
+
+| FR-001 | M | User registration (client and admin) requiring name, CPF, email, contact phone number, and address. |
+| FR-002 | M | Page to list packages (medium/high/luxury) with: description, scope, estimated deadline, base price, project team of engineers, architects, and related personnel. |
+| FR-003 | M | Package details page highlighting deliverables and a sample timeline. |
+| FR-004 | M | General FAQ/Information page, including basic information on all stages of the project. |
+| FR-005 | C | Institutional "About Us" page (mission, vision, values, company credibility). |
+| FR-006 | M | Request form with client data, address, type of work, desired package, and initial attachments. |
+| FR-007 | M | Generation of protocol number upon completion of the initial purchase process. |
+| FR-008 | M | Upload/download documents (PDF/JPG/PNG) with simple versioning. |
+| FR-009 | C | Quick contact area (simple form or link to WhatsApp/phone). |
+| FR-010 | M | Simple dashboard for administrators to view new requests with basic filters. |
+
+### 6.2. Non-Functional Requirements
+
+The following technical and quality requirements are mandatory for the system.
+
+| ID | Priority | Description |
+| NFR-001 | M | The system must be responsive (desktop and mobile). |
+| NFR-002 | M | Response time for page loading must not exceed 3 seconds on stable connections. |
+| NFR-003 | M | Minimum availability of 99% during business hours (8:00 AM - 6:00 PM). |
+| NFR-004 | M | Intuitive, modern interface with minimal accessibility (use of labels, adequate contrast, simple navigation). |
+| NFR-005 | M | Password with at least 8 characters. |
+| NFR-006 | M | The system must be in Brazilian Portuguese by default. |
+| NFR-007 | M | Must partially follow WCAG 2.1 level AA guidelines (at least present alternative text in images). |
+
+---
+## 7. Data Models
+
+### 7.1. Conceptual Model
+
+The system operates around three core concepts: **Users**, **Projects**, and **Packages**.
+
+* A **User** can be a `Client` or `Admin`. Clients initiate projects, while Admins manage the platform's content and requests.
+* A **Package** represents a predefined construction service (e.g., "Luxury Renovation"), with a defined scope, base price, and schedule.
+* A **Project** is created when a Client requests a `Package`. The project will contain all associated information, including client details, address, chosen package, documents, status updates, and communication history. It connects the client to the designated team of professionals.

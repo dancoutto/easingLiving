@@ -86,6 +86,7 @@ O sistema opera em torno de três conceitos centrais: **Usuários**, **Projetos*
 * Um **Projeto** é criado quando um `Cliente` solicita um `Pacote`. O projeto conterá todas as informações associadas, incluindo dados do cliente, endereço, pacote escolhido, documentos, atualizações de status e histórico de comunicação. Ele conecta o cliente à equipe de profissionais designada.
 
 https://github.com/dancoutto/easingLiving/releases/download/image/Captura.de.tela.2025-09-15.205254.png
+sha256:627bb0dfa5e95bb4aa904bd821866444c5a0a70c4b01502f8d0cc9aa6f49e852
 
 ### 7.2. Modelo Entidade-Relacionamento (Básico)
 

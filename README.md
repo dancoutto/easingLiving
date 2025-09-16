@@ -41,10 +41,7 @@ Com base nas necessidades do cliente e na solução proposta, a plataforma inclu
 * **Comunicação Integrada:** Um canal de comunicação direto para garantir que dúvidas e ajustes sejam resolvidos rapidamente entre o cliente e a equipe.
 * **Orçamento e Pagamentos Online:** Apresentação clara dos custos, com a praticidade de realizar pagamentos através da própria plataforma para evitar surpresas financeiras.
 
----
-
 ## 6. Requisitos do Sistema
-
 ### 6.1. Requisitos Funcionais
 
 As seguintes funcionalidades são especificadas para a plataforma, categorizadas por prioridade: `(M) Must (Obrigatório) / (S) Should (Desejável) / (C) Could (Opcional)`.
@@ -73,10 +70,7 @@ Os seguintes requisitos técnicos e de qualidade são obrigatórios para o siste
 | NFR-006 | M | O sistema deve estar em português-BR por padrão. |
 | NFR-007 | M | Deve seguir parcialmente as diretrizes WCAG 2.1 nível AA (no mínimo apresentar textos alternativos em imagens). |
 
----
-
 ## 7. Modelos de Dados
-
 ### 7.1. Modelo Conceitual
 
 O sistema opera em torno de três conceitos centrais: **Usuários**, **Projetos** e **Pacotes**.
@@ -85,7 +79,7 @@ O sistema opera em torno de três conceitos centrais: **Usuários**, **Projetos*
 * Um **Pacote** representa um serviço de construção pré-definido (ex: "Reforma de Luxo"), com escopo, preço base e cronograma definidos.
 * Um **Projeto** é criado quando um `Cliente` solicita um `Pacote`. O projeto conterá todas as informações associadas, incluindo dados do cliente, endereço, pacote escolhido, documentos, atualizações de status e histórico de comunicação. Ele conecta o cliente à equipe de profissionais designada.
 
-_________________________________________________________________________________________________________________________________________
+---
 
 # EasingLiving - Project README
 
@@ -129,9 +123,7 @@ Based on the client's needs and the proposed solution, the platform will include
 * **Integrated Communication:** A direct communication channel to ensure that questions and adjustments are resolved quickly between the client and the team.
 * **Online Estimating and Payments:** Clear presentation of costs, with the convenience of making payments through the platform itself to avoid financial surprises.
 
----
 ## 6. System Requirements
-
 ### 6.1. Functional Requirements
 
 The following functionalities are specified for the platform, categorized by priority: (M) Must / (S) Should / (C) Could.
@@ -160,9 +152,7 @@ The following technical and quality requirements are mandatory for the system.
 | NFR-006 | M | The system must be in Brazilian Portuguese by default. |
 | NFR-007 | M | Must partially follow WCAG 2.1 level AA guidelines (at least present alternative text in images). |
 
----
 ## 7. Data Models
-
 ### 7.1. Conceptual Model
 
 The system operates around three core concepts: **Users**, **Projects**, and **Packages**.

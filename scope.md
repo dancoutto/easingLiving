@@ -1,5 +1,7 @@
 **PROJETO DE SOFTWARE**
 
+[Clique aqui para baixar o PDF do esboço/escopo do projeto](https://github.com/dancoutto/easingLiving/releases/download/docs/scope-outline.pdf)
+
 **Nome do Projeto:** easingLiving  
 **Equipe:** Daniel Braga Alves do Couto \- 62312771  
 Gabriel Mendes Bitencourt \- 62321162  

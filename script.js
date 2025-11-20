@@ -36,10 +36,61 @@ let currentUserData = null;
 let currentAuthUser = null;
 
 const dadosProjetos = {
-    "padrao": { titulo: "Casa Contemporânea 120m²", categoria: "Padrão", preco: "R$ 450.000,00", descricao: "2 quartos, 1 suíte.", responsavel: "Arq. Estela Fontes", img: "assets/ContemporaryHouse120m2/contemporaryHouseExternal.png", galeria: ["assets/ContemporaryHouse120m2/contemporaryHouseExternal.png"] },
-    "medio-alto": { titulo: "Sobrado Moderno 200m²", categoria: "Médio-Alto", preco: "R$ 950.000,00", descricao: "3 suítes, piscina.", responsavel: "Arq. Estela Fontes", img: "assets/ModernTownhouse200m2/modernTownhouseExternal.png", galeria: ["assets/ModernTownhouse200m2/modernTownhouseExternal.png"] },
-    "alto": { titulo: "Residência de Luxo 350m²", categoria: "Alto Padrão", preco: "R$ 1.950.000,00", descricao: "4 suítes, automação.", responsavel: "Arq. Estela Fontes", img: "assets/LuxuryResidence350m2/luxuryResidenceExternal.png", galeria: ["assets/LuxuryResidence350m2/luxuryResidenceExternal.png"] },
-    "excelente": { titulo: "Mansão Exclusiva 600m²", categoria: "Excelente", preco: "R$ 4.500.000,00", descricao: "5 suítes, heliponto.", responsavel: "Arq. Estela Fontes", img: "assets/ExclusiveMansion600m2/exclusiveMansionExternal.png", galeria: ["assets/ExclusiveMansion600m2/exclusiveMansionExternal.png"] }
+    "padrao": {
+        titulo: "Casa Contemporânea 120m²",
+        categoria: "Padrão",
+        preco: "R$ 450.000,00",
+        descricao: "Ideal para famílias pequenas. Design inteligente que maximiza o espaço, com integração total entre sala e cozinha.",
+        responsavel: "Arq. Estela Fontes",
+        img: "assets/ContemporaryHouse120m2/contemporaryHouseExternal.png",
+        galeria: [
+            "assets/ContemporaryHouse120m2/contemporaryHouseExternal.png",
+            "assets/ContemporaryHouse120m2/contemporaryHouseHall.png",
+            "assets/ContemporaryHouse120m2/contemporaryHouseRoom.png",
+            "assets/ContemporaryHouse120m2/contemporaryHouseBathroom.png"
+        ]
+    },
+    "medio-alto": {
+        titulo: "Sobrado Moderno 200m²",
+        categoria: "Médio-Alto",
+        preco: "R$ 950.000,00",
+        descricao: "Conforto e design em dois pavimentos. Fachada imponente com pé direito duplo e área de lazer completa.",
+        responsavel: "Arq. Estela Fontes",
+        img: "assets/ModernTownhouse200m2/modernTownhouseExternal.png",
+        galeria: [
+            "assets/ModernTownhouse200m2/modernTownhouseExternal.png",
+            "assets/ModernTownhouse200m2/ModernTownhouseHall.png",
+            "assets/ModernTownhouse200m2/ModernTownhouseRoom.png",
+            "assets/ModernTownhouse200m2/ModernTownhouseBathroom.png"
+        ]
+    },
+    "alto": {
+        titulo: "Residência de Luxo 350m²",
+        categoria: "Alto Padrão",
+        preco: "R$ 1.950.000,00",
+        descricao: "Exclusividade e sofisticação. Acabamentos premium, automação residencial completa e amplas suítes.",
+        responsavel: "Arq. Estela Fontes",
+        img: "assets/LuxuryResidence350m2/luxuryResidenceExternal.png",
+        galeria: [
+            "assets/LuxuryResidence350m2/luxuryResidenceExternal.png",
+            "assets/LuxuryResidence350m2/luxuryResidenceHall.png",
+            "assets/LuxuryResidence350m2/luxuryResidenceBathroom.png"
+        ]
+    },
+    "excelente": {
+        titulo: "Mansão Exclusiva 600m²",
+        categoria: "Excelente",
+        preco: "R$ 4.500.000,00",
+        descricao: "O ápice do luxo e da arquitetura. Uma obra de arte habitável com adega, academia privativa e paisagismo assinado.",
+        responsavel: "Arq. Estela Fontes",
+        img: "assets/ExclusiveMansion600m2/exclusiveMansionExternal.png",
+        galeria: [
+            "assets/ExclusiveMansion600m2/exclusiveMansionExternal.png",
+            "assets/ExclusiveMansion600m2/exclusiveMansionHall.png",
+            "assets/ExclusiveMansion600m2/exclusiveMansionRoom.png",
+            "assets/ExclusiveMansion600m2/exclusiveMansionBathroom.png"
+        ]
+    }
 };
 
 document.addEventListener("DOMContentLoaded", () => {

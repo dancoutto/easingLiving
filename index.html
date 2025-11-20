@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasingLiving</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    fontFamily: { sans: ["Inter", "sans-serif"] },
+                    colors: {
+                        "primary": { "light": "#2D3748", "dark": "#E2E8F0" },
+                        "background": { "light": "#FFFFFF", "dark": "#1A202C" },
+                        "surface": { "light": "#F7FAFC", "dark": "#2D3748" },
+                        "border": { "light": "#E2E8F0", "dark": "#4A5568" }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-primary-light dark:text-primary-dark antialiased transition-colors duration-300">
+
+    <header
+        class="sticky top-0 z-50 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-border-light dark:border-border-dark">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#home" class="text-2xl font-bold tracking-tight">easing<span
+                        class="text-gray-500">Living</span></a>
+
+                <div class="hidden md:flex md:items-center md:space-x-8">
+                    <a href="#home"
+                        class="nav-link text-sm font-medium hover:text-primary-light dark:hover:text-white transition-colors">Home</a>
+                    <a href="#catalogo"
+                        class="nav-link text-sm font-medium hover:text-primary-light dark:hover:text-white transition-colors">Catálogo</a>
+                    <a href="#sobre"
+                        class="nav-link text-sm font-medium hover:text-primary-light dark:hover:text-white transition-colors">Sobre
+                        Nós</a>
+                    <a href="#faq"
+                        class="nav-link text-sm font-medium hover:text-primary-light dark:hover:text-white transition-colors">FAQ</a>
+                    <a href="#contato"
+                        class="nav-link text-sm font-medium hover:text-primary-light dark:hover:text-white transition-colors">Contato</a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-4">
+                    <button id="theme-toggle"
+                        class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-surface-light dark:hover:bg-surface-dark transition-colors">
+                        <svg id="theme-toggle-light-icon" class="icon" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <svg id="theme-toggle-dark-icon" class="hidden icon" fill="none" stroke="currentColor"
+                            stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                            </path>
+                        </svg>
+                    </button>
+                    <a id="header-login-link" href="#login"
+                        class="px-4 py-2 text-sm font-medium rounded-lg border border-border-light dark:border-border-dark hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Login</a>
+                    <a id="header-account-link" href="#dashboard"
+                        class="hidden px-4 py-2 text-sm font-medium rounded-lg border border-border-light dark:border-border-dark hover:bg-gray-50 dark:hover:bg-gray-800">Minha
+                        Conta</a>
+                    <button id="header-logout-button"
+                        class="hidden px-4 py-2 text-sm font-medium rounded-lg bg-red-50 text-red-600 hover:bg-red-100 transition-colors">Sair</button>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="theme-toggle-mobile" class="p-2 mr-2 rounded-lg text-gray-500 dark:text-gray-400">
+                        <svg id="theme-toggle-light-icon-mobile" class="icon" fill="none" stroke="currentColor"
+                            stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M12 12a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
+                        </svg>
+                        <svg id="theme-toggle-dark-icon-mobile" class="hidden icon" fill="none" stroke="currentColor"
+                            stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button id="mobile-menu-button" class="p-2 text-gray-500 dark:text-gray-400">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark p-4">
+            <a href="#home" class="block py-2">Home</a>
+            <a href="#catalogo" class="block py-2">Catálogo</a>
+            <a href="#dashboard" id="mobile-account-link" class="hidden block py-2 font-bold">Minha Conta</a>
+            <a href="#login" id="mobile-login-link" class="block py-2 font-bold">Login</a>
+            <button id="mobile-logout-button" class="hidden block py-2 text-red-500 w-full text-left">Sair</button>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <section id="page-home" class="page-section active">
+            <div class="text-center pt-10">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">O projeto da sua casa,<br><span
+                        class="text-gray-500 dark:text-gray-400">simplificado.</span></h1>
+                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10">Escolha entre
+                    dezenas de projetos de arquitetura premiados. Construa no seu lote ou deixe que encontramos o lugar
+                    perfeito para você.</p>
+                <a href="#catalogo" class="btn-hero">Ver Catálogo de Projetos</a>
+            </div>
+            <div class="mt-20">
+                <img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260"
+                    class="rounded-xl shadow-2xl object-cover w-full aspect-video"
+                    onerror="this.src='https://placehold.co/1200x600'">
+            </div>
+        </section>
+
+        <section id="page-login" class="page-section">
+            <div
+                class="max-w-md mx-auto bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg mt-10 border border-border-light dark:border-border-dark">
+                <h2 class="text-2xl font-bold text-center mb-8">Acesse sua conta</h2>
+                <div class="mb-4 p-3 bg-blue-50 text-blue-700 rounded text-sm">
+                    <p><strong>Teste Admin:</strong> admin@el.com / 12345678</p>
+                    <p><strong>Teste Cliente:</strong> cliente@el.com / 12345678</p>
+                </div>
+                <form class="space-y-6">
+                    <div><label class="block text-sm font-medium mb-2">E-mail</label><input id="email-login"
+                            type="email" required></div>
+                    <div><label class="block text-sm font-medium mb-2">Senha</label><input id="password-login"
+                            type="password" required></div>
+                    <button type="submit" class="btn-primary w-full">Entrar</button>
+                </form>
+                <p class="mt-6 text-center text-sm text-gray-500">Ainda não tem conta? <a href="#cadastro"
+                        class="font-bold hover:underline">Cadastre-se</a></p>
+            </div>
+        </section>
+
+        <section id="page-cadastro" class="page-section">
+            <div
+                class="max-w-lg mx-auto bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg mt-10 border border-border-light dark:border-border-dark">
+                <h2 class="text-2xl font-bold text-center mb-8">Crie sua conta</h2>
+                <form id="form-cadastro" class="space-y-4">
+                    <div><label class="block text-sm font-medium mb-1">Nome Completo</label><input id="nome-cadastro"
+                            type="text" required></div>
+                    <div><label class="block text-sm font-medium mb-1">E-mail</label><input id="email-cadastro"
+                            type="email" required></div>
+                    <div><label class="block text-sm font-medium mb-1">Senha</label><input id="password-cadastro"
+                            type="password" minlength="8" required></div>
+                    <button type="submit" class="btn-primary w-full mt-4">Cadastrar</button>
+                </form>
+                <p class="mt-6 text-center text-sm text-gray-500">Já tem conta? <a href="#login"
+                        class="font-bold hover:underline">Faça login</a></p>
+            </div>
+        </section>
+
+        <section id="page-catalogo" class="page-section">
+            <h2 class="text-3xl font-bold tracking-tight text-center mb-12">Nosso Catálogo</h2>
+            <div id="catalogo-filtros" class="mb-10 flex justify-center flex-wrap gap-3">
+                <button class="filter-btn active-filter" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="padrao">Padrão</button>
+                <button class="filter-btn" data-filter="medio-alto">Médio-Alto</button>
+                <button class="filter-btn" data-filter="alto">Alto</button>
+                <button class="filter-btn" data-filter="excelente">Excelente</button>
+            </div>
+            <div id="catalogo-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-projeto bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg"
+                    data-category="padrao">
+                    <img src="assets/ContemporaryHouse120m2/contemporaryHouseExternal.png"
+                        class="w-full h-48 object-cover"
+                        onerror="this.src='https://placehold.co/400x250?text=Casa+Padrão'">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-gray-500 uppercase">Padrão</span>
+                        <h3 class="text-xl font-bold my-2">Casa Contemporânea 120m²</h3>
+                        <div class="mb-4 font-bold text-lg">A partir de R$ 450.000,00</div>
+                        <a href="#detalhe-pacote/padrao" class="btn-primary w-full text-center block no-underline">Ver
+                            Detalhes</a>
+                    </div>
+                </div>
+                <div class="card-projeto bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg"
+                    data-category="medio-alto">
+                    <img src="assets/ModernTownhouse200m2/modernTownhouseExternal.png" class="w-full h-48 object-cover"
+                        onerror="this.src='https://placehold.co/400x250?text=Sobrado'">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-gray-500 uppercase">Médio-Alto</span>
+                        <h3 class="text-xl font-bold my-2">Sobrado Moderno 200m²</h3>
+                        <div class="mb-4 font-bold text-lg">A partir de R$ 950.000,00</div>
+                        <a href="#detalhe-pacote/medio-alto"
+                            class="btn-primary w-full text-center block no-underline">Ver Detalhes</a>
+                    </div>
+                </div>
+                <div class="card-projeto bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg"
+                    data-category="alto">
+                    <img src="assets/LuxuryResidence350m2/luxuryResidenceExternal.png" class="w-full h-48 object-cover"
+                        onerror="this.src='https://placehold.co/400x250?text=Mansão'">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-gray-500 uppercase">Alto Padrão</span>
+                        <h3 class="text-xl font-bold my-2">Residência de Luxo 350m²</h3>
+                        <div class="mb-4 font-bold text-lg">A partir de R$ 1.950.000,00</div>
+                        <a href="#detalhe-pacote/alto" class="btn-primary w-full text-center block no-underline">Ver
+                            Detalhes</a>
+                    </div>
+                </div>
+                <div class="card-projeto bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg"
+                    data-category="excelente">
+                    <img src="assets/ExclusiveMansion600m2/exclusiveMansionExternal.png"
+                        class="w-full h-48 object-cover"
+                        onerror="this.src='https://placehold.co/400x250?text=Exclusiva'">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-gray-500 uppercase">Excelente</span>
+                        <h3 class="text-xl font-bold my-2">Mansão Exclusiva 600m²</h3>
+                        <div class="mb-4 font-bold text-lg">A partir de R$ 4.500.000,00</div>
+                        <a href="#detalhe-pacote/excelente"
+                            class="btn-primary w-full text-center block no-underline">Ver Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-detalhe-pacote" class="page-section">
+            <div class="container mx-auto">
+                <button onclick="history.back()"
+                    class="text-sm mb-6 inline-flex items-center text-gray-500 hover:text-primary-light">&larr;
+                    Voltar</button>
+                <h2 id="detalhe-titulo" class="text-3xl md:text-4xl font-bold mb-2">Título</h2>
+                <span id="detalhe-categoria"
+                    class="inline-block px-3 py-1 rounded-full text-sm bg-gray-200 dark:bg-gray-700 mb-6">Categoria</span>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2">
+                        <img id="detalhe-img" src="" class="w-full rounded-xl shadow-lg mb-4">
+                        <div id="detalhe-galeria" class="grid grid-cols-4 gap-4"></div>
+                    </div>
+                    <div class="lg:col-span-1">
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-lg border border-border-light dark:border-border-dark">
+                            <p id="detalhe-preco" class="text-3xl font-bold mb-6">R$ 0,00</p>
+                            <p id="detalhe-descricao" class="text-gray-600 dark:text-gray-300 mb-6">Descrição...</p>
+                            <p class="text-sm mb-6"><strong>Responsável:</strong> <span id="responsavel">...</span></p>
+                            <a id="btn-solicitar" href="#" class="btn-primary text-center no-underline w-full">Solicitar
+                                Orçamento</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-solicitacao" class="page-section">
+            <div
+                class="max-w-2xl mx-auto bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg border border-border-light dark:border-border-dark">
+                <h2 class="text-3xl font-bold text-center mb-8">Solicitação de Orçamento</h2>
+                <form id="form-solicitacao" class="space-y-6">
+                    <fieldset class="space-y-4">
+                        <legend class="text-lg font-semibold mb-4 border-b pb-2 w-full">Seus Dados</legend>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div><label class="block text-sm mb-1">Nome</label><input id="sol-nome" type="text"
+                                    required></div>
+                            <div><label class="block text-sm mb-1">E-mail</label><input id="sol-email" type="email"
+                                    required></div>
+                            <div class="md:col-span-2"><label class="block text-sm mb-1">Telefone</label><input
+                                    id="sol-telefone" type="tel" required></div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="space-y-4">
+                        <legend class="text-lg font-semibold mb-4 border-b pb-2 w-full">Sobre a Obra</legend>
+                        <div><label class="block text-sm mb-1">Localização</label><input id="sol-endereco" type="text"
+                                required></div>
+                        <div><label class="block text-sm mb-1">Lote</label>
+                            <select id="sol-tipo-obra">
+                                <option value="lote_proprio">Já possuo</option>
+                                <option value="lote_empresa">Preciso comprar</option>
+                            </select>
+                        </div>
+                        <div><label class="block text-sm mb-1">Pacote</label>
+                            <select id="sol-pacote" required>
+                                <option value="">Selecione...</option>
+                                <option value="padrao">Padrão</option>
+                                <option value="medio-alto">Médio-Alto</option>
+                                <option value="alto">Alto</option>
+                                <option value="excelente">Excelente</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <div>
+                        <label class="block text-sm mb-2">Anexos</label>
+                        <input type="file" id="sol-anexos"
+                            class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary-light file:text-white">
+                        <div id="file-list" class="text-xs text-gray-500 mt-2"></div>
+                    </div>
+                    <button type="submit" class="btn-primary w-full mt-4">Concluir Solicitação</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="page-conclusao" class="page-section">
+            <div
+                class="max-w-xl mx-auto text-center bg-surface-light dark:bg-surface-dark p-10 rounded-xl shadow-lg mt-10">
+                <div
+                    class="mx-auto flex items-center justify-center h-20 w-20 rounded-full bg-green-100 text-green-600 mb-6">
+                    <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold mb-4">Solicitação Recebida!</h2>
+                <p class="mb-8 text-gray-600 dark:text-gray-300">Entraremos em contato em até 2 dias úteis.</p>
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg inline-block min-w-[300px]">
+                    <p class="text-sm text-gray-500 font-bold mb-2">Protocolo</p>
+                    <p id="protocolo-numero" class="text-3xl font-mono font-bold tracking-wider">...</p>
+                </div>
+                <div class="mt-10"><a href="#home" class="btn-secondary">Voltar</a></div>
+            </div>
+        </section>
+
+        <section id="page-dashboard" class="page-section">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 dark:text-white" id="dash-title">Painel de Controle</h2>
+                    <p id="dash-user-name" class="text-gray-500 dark:text-gray-400 text-sm"></p>
+                </div>
+            </div>
+
+            <div
+                class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-lg border border-border-light dark:border-border-dark">
+
+                <div id="admin-controls"
+                    class="hidden flex-col gap-4 mb-8 bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+                    <h4 class="font-semibold text-sm uppercase text-gray-500 tracking-wider">Filtros Avançados</h4>
+
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold mb-1 text-gray-500">Buscar (ID ou Nome)</label>
+                            <input type="text" id="dash-search-text" placeholder="Ex: João ou EL-..."
+                                class="p-2 text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold mb-1 text-gray-500">Status</label>
+                            <select id="dash-filter-status" class="p-2 text-sm">
+                                <option value="all">Todos</option>
+                                <option value="Novo">Novo</option>
+                                <option value="Em Análise">Em Análise</option>
+                                <option value="Concluído">Concluído</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold mb-1 text-gray-500">Categoria da Casa</label>
+                            <select id="dash-filter-cat" class="p-2 text-sm">
+                                <option value="all">Todas</option>
+                                <option value="Padrão">Padrão</option>
+                                <option value="Médio-Alto">Médio-Alto</option>
+                                <option value="Alto Padrão">Alto Padrão</option>
+                                <option value="Excelente">Excelente</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold mb-1 text-gray-500">Tipo de Obra</label>
+                            <select id="dash-filter-type" class="p-2 text-sm">
+                                <option value="all">Todos</option>
+                                <option value="lote_proprio">Lote Próprio</option>
+                                <option value="lote_empresa">Compra de Lote</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-end">
+                        <button id="btn-clear-filters" class="text-xs text-red-500 hover:underline">Limpar
+                            Filtros</button>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead
+                            class="border-b dark:border-gray-700 bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-300 uppercase text-xs tracking-wider">
+                            <tr>
+                                <th class="p-4">Protocolo</th>
+                                <th class="p-4">Cliente</th>
+                                <th class="p-4">Detalhes do Pedido</th>
+                                <th class="p-4">Status</th>
+                                <th class="p-4 text-right">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dash-table-body" class="text-sm divide-y divide-gray-100 dark:divide-gray-700">
+                        </tbody>
+                    </table>
+                    <div id="dash-empty" class="hidden flex flex-col items-center justify-center py-12 text-gray-400">
+                        <svg class="w-12 h-12 mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                        <p>Nenhum resultado encontrado para os filtros aplicados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-sobre" class="page-section">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Nossa Missão</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300">Simplificar e democratizar o acesso à arquitetura de
+                    qualidade.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center">
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg hover:-translate-y-2 transition-transform">
+                    <div
+                        class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Visão</h3>
+                    <p>Ser a principal plataforma digital de projetos residenciais.</p>
+                </div>
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg hover:-translate-y-2 transition-transform">
+                    <div
+                        class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-purple-100 text-purple-600 mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Valores</h3>
+                    <p>Transparência, inovação e foco no cliente.</p>
+                </div>
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg hover:-translate-y-2 transition-transform">
+                    <div
+                        class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-100 text-green-600 mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Credibilidade</h3>
+                    <p>Profissionais com registro ativo (CAU/CREA).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-faq" class="page-section">
+            <h2 class="text-3xl font-bold text-center mb-12">Perguntas Frequentes</h2>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <details class="bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-sm cursor-pointer">
+                    <summary class="font-bold text-lg">Como funciona?</summary>
+                    <p class="mt-2 text-gray-600 dark:text-gray-300">Escolha o pacote, solicite orçamento e nós cuidamos
+                        do resto.</p>
+                </details>
+                <details class="bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-sm cursor-pointer">
+                    <summary class="font-bold text-lg">Aceitam lote próprio?</summary>
+                    <p class="mt-2 text-gray-600 dark:text-gray-300">Sim, adaptamos o projeto ao seu terreno.</p>
+                </details>
+                <details class="bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-sm cursor-pointer">
+                    <summary class="font-bold text-lg">O que está incluso?</summary>
+                    <p class="mt-2 text-gray-600 dark:text-gray-300">Projeto arquitetônico, complementares e execução da
+                        obra.</p>
+                </details>
+                <details class="bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-sm cursor-pointer">
+                    <summary class="font-bold text-lg">O preço é final?</summary>
+                    <p class="mt-2 text-gray-600 dark:text-gray-300">É uma estimativa precisa. O valor final depende do
+                        acabamento.</p>
+                </details>
+            </div>
+        </section>
+
+        <section id="page-contato" class="page-section">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Contato Rápido</h2>
+                    <form class="space-y-6">
+                        <div><label class="block text-sm mb-2">Nome</label><input type="text" required></div>
+                        <div><label class="block text-sm mb-2">E-mail</label><input type="email" required></div>
+                        <div><label class="block text-sm mb-2">Mensagem</label><textarea rows="4" required></textarea>
+                        </div>
+                        <button class="btn-primary w-full">Enviar</button>
+                    </form>
+                </div>
+                <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl shadow-xl text-center sticky top-24">
+                    <h3 class="text-2xl font-bold mb-4">WhatsApp</h3>
+                    <p class="mb-8">Fale com um especialista agora.</p>
+                    <a href="https://api.whatsapp.com/send?phone=5531999999999" target="_blank"
+                        class="inline-flex items-center justify-center w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg shadow-lg">
+                        Falar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        class="bg-surface-light dark:bg-surface-dark border-t border-border-light dark:border-border-dark mt-auto py-8 text-center">
+        <p class="text-gray-500 dark:text-gray-400">&copy; 2025 EasingLiving. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="admin-modal" class="modal-overlay">
+        <div class="modal-content relative">
+            <button id="close-modal"
+                class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-xl">&times;</button>
+            <h3 class="text-2xl font-bold mb-4">Detalhes da Solicitação</h3>
+            <div id="modal-body" class="space-y-3"></div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

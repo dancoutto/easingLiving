@@ -36,87 +36,30 @@ let currentUserData = null;
 let currentAuthUser = null;
 
 const dadosProjetos = {
-    "padrao": {
-        titulo: "Casa Contemporânea 120m²",
-        categoria: "Padrão",
-        preco: "R$ 450.000,00",
-        descricao: "Ideal para famílias pequenas. Design inteligente que maximiza o espaço, com integração total entre sala e cozinha.",
-        responsavel: "Arq. Estela Fontes",
-        img: "assets/ContemporaryHouse120m2/contemporaryHouseExternal.png",
-        galeria: [
-            "assets/ContemporaryHouse120m2/contemporaryHouseExternal.png",
-            "assets/ContemporaryHouse120m2/contemporaryHouseHall.png",
-            "assets/ContemporaryHouse120m2/contemporaryHouseRoom.png",
-            "assets/ContemporaryHouse120m2/contemporaryHouseBathroom.png"
-        ]
-    },
-    "medio-alto": {
-        titulo: "Sobrado Moderno 200m²",
-        categoria: "Médio-Alto",
-        preco: "R$ 950.000,00",
-        descricao: "Conforto e design em dois pavimentos. Fachada imponente com pé direito duplo e área de lazer completa.",
-        responsavel: "Arq. Estela Fontes",
-        img: "assets/ModernTownhouse200m2/modernTownhouseExternal.png",
-        galeria: [
-            "assets/ModernTownhouse200m2/modernTownhouseExternal.png",
-            "assets/ModernTownhouse200m2/ModernTownhouseHall.png",
-            "assets/ModernTownhouse200m2/ModernTownhouseRoom.png",
-            "assets/ModernTownhouse200m2/ModernTownhouseBathroom.png"
-        ]
-    },
-    "alto": {
-        titulo: "Residência de Luxo 350m²",
-        categoria: "Alto Padrão",
-        preco: "R$ 1.950.000,00",
-        descricao: "Exclusividade e sofisticação. Acabamentos premium, automação residencial completa e amplas suítes.",
-        responsavel: "Arq. Estela Fontes",
-        img: "assets/LuxuryResidence350m2/luxuryResidenceExternal.png",
-        galeria: [
-            "assets/LuxuryResidence350m2/luxuryResidenceExternal.png",
-            "assets/LuxuryResidence350m2/luxuryResidenceHall.png",
-            "assets/LuxuryResidence350m2/luxuryResidenceBathroom.png"
-        ]
-    },
-    "excelente": {
-        titulo: "Mansão Exclusiva 600m²",
-        categoria: "Excelente",
-        preco: "R$ 4.500.000,00",
-        descricao: "O ápice do luxo e da arquitetura. Uma obra de arte habitável com adega, academia privativa e paisagismo assinado.",
-        responsavel: "Arq. Estela Fontes",
-        img: "assets/ExclusiveMansion600m2/exclusiveMansionExternal.png",
-        galeria: [
-            "assets/ExclusiveMansion600m2/exclusiveMansionExternal.png",
-            "assets/ExclusiveMansion600m2/exclusiveMansionHall.png",
-            "assets/ExclusiveMansion600m2/exclusiveMansionRoom.png",
-            "assets/ExclusiveMansion600m2/exclusiveMansionBathroom.png"
-        ]
-    }
+    "padrao": { titulo: "Casa Contemporânea 120m²", categoria: "Padrão", preco: "R$ 450.000,00", descricao: "2 quartos, 1 suíte.", responsavel: "Arq. Estela Fontes", img: "assets/ContemporaryHouse120m2/contemporaryHouseExternal.png", galeria: ["assets/ContemporaryHouse120m2/contemporaryHouseExternal.png"] },
+    "medio-alto": { titulo: "Sobrado Moderno 200m²", categoria: "Médio-Alto", preco: "R$ 950.000,00", descricao: "3 suítes, piscina.", responsavel: "Arq. Estela Fontes", img: "assets/ModernTownhouse200m2/modernTownhouseExternal.png", galeria: ["assets/ModernTownhouse200m2/modernTownhouseExternal.png"] },
+    "alto": { titulo: "Residência de Luxo 350m²", categoria: "Alto Padrão", preco: "R$ 1.950.000,00", descricao: "4 suítes, automação.", responsavel: "Arq. Estela Fontes", img: "assets/LuxuryResidence350m2/luxuryResidenceExternal.png", galeria: ["assets/LuxuryResidence350m2/luxuryResidenceExternal.png"] },
+    "excelente": { titulo: "Mansão Exclusiva 600m²", categoria: "Excelente", preco: "R$ 4.500.000,00", descricao: "5 suítes, heliponto.", responsavel: "Arq. Estela Fontes", img: "assets/ExclusiveMansion600m2/exclusiveMansionExternal.png", galeria: ["assets/ExclusiveMansion600m2/exclusiveMansionExternal.png"] }
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-
+    
     const htmlElement = document.documentElement;
-
     const toggleTheme = () => {
         htmlElement.classList.toggle("dark");
         const isDark = htmlElement.classList.contains("dark");
         localStorage.setItem("theme", isDark ? "dark" : "light");
         updateThemeIcons(isDark);
     };
-
     const updateThemeIcons = (isDark) => {
         document.getElementById("theme-toggle-dark-icon").classList.toggle("hidden", !isDark);
         document.getElementById("theme-toggle-light-icon").classList.toggle("hidden", isDark);
         document.getElementById("theme-toggle-dark-icon-mobile").classList.toggle("hidden", !isDark);
         document.getElementById("theme-toggle-light-icon-mobile").classList.toggle("hidden", isDark);
     };
-
     document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
     document.getElementById("theme-toggle-mobile").addEventListener("click", toggleTheme);
-
-    if (localStorage.getItem("theme") === "dark") {
-        htmlElement.classList.add("dark"); updateThemeIcons(true);
-    }
+    if (localStorage.getItem("theme") === "dark") { htmlElement.classList.add("dark"); updateThemeIcons(true); }
 
     const mobileMenu = document.getElementById("mobile-menu");
     document.getElementById("mobile-menu-button").addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
@@ -124,28 +67,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     onAuthStateChanged(auth, async (user) => {
         if (user) {
-
             currentAuthUser = user;
-
             const docRef = doc(db, "users", user.uid);
             const docSnap = await getDoc(docRef);
-
             if (docSnap.exists()) {
                 currentUserData = docSnap.data();
             } else {
                 currentUserData = { role: 'client', name: user.email };
             }
-
             updateAuthUI(true);
-
-            if (window.location.hash === '#login' || window.location.hash === '#cadastro') {
+            if(window.location.hash === '#login' || window.location.hash === '#cadastro') {
                 window.location.hash = "#dashboard";
             }
-
-            if (window.location.hash === '#dashboard') {
+            if(window.location.hash === '#dashboard') {
                 renderDashboard();
             }
-
         } else {
             currentAuthUser = null;
             currentUserData = null;
@@ -159,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.getElementById("header-login-link").style.display = isLogged ? "none" : "block";
         const accLink = document.getElementById("header-account-link");
-
+        
         if (isAdmin) {
             document.querySelectorAll('.nav-link').forEach(el => el.style.display = 'none');
             accLink.style.display = "block";
@@ -196,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const email = document.getElementById("email-login").value;
         const pass = document.getElementById("password-login").value;
         const btn = e.target.querySelector('button');
-
+        
         try {
             btn.innerText = "Entrando...";
             btn.disabled = true;
@@ -216,24 +152,20 @@ document.addEventListener("DOMContentLoaded", () => {
         const pass = document.getElementById("password-cadastro").value;
         const btn = e.target.querySelector('button');
 
-        if (pass.length < 8) return alert("Senha deve ter no mínimo 8 caracteres");
+        if(pass.length < 8) return alert("Senha deve ter no mínimo 8 caracteres");
 
         try {
             btn.innerText = "Cadastrando...";
             btn.disabled = true;
-
             const userCredential = await createUserWithEmailAndPassword(auth, email, pass);
             const user = userCredential.user;
-
             await setDoc(doc(db, "users", user.uid), {
                 name: nome,
                 email: email,
                 role: "client",
                 createdAt: new Date()
             });
-
             alert("Conta criada com sucesso!");
-
         } catch (error) {
             alert("Erro ao cadastrar: " + error.message);
         } finally {
@@ -255,8 +187,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const renderDashboard = async () => {
         const tbody = document.getElementById("dash-table-body");
         tbody.innerHTML = '<tr><td colspan="5" class="p-4 text-center">Carregando dados...</td></tr>';
-
-        if (!currentUserData) return;
+        
+        if(!currentUserData) return;
 
         const isAdmin = currentUserData.role === 'admin';
         const dashTitle = document.getElementById("dash-title");
@@ -269,14 +201,14 @@ document.addEventListener("DOMContentLoaded", () => {
             const requestsRef = collection(db, "requests");
 
             if (isAdmin) {
-                q = query(requestsRef, orderBy("createdAt", "desc"));
+                q = query(requestsRef, orderBy("createdAt", "desc")); 
             } else {
                 q = query(requestsRef, where("userId", "==", currentAuthUser.uid), orderBy("createdAt", "desc"));
             }
 
             const querySnapshot = await getDocs(q);
             let requests = [];
-
+            
             querySnapshot.forEach((doc) => {
                 requests.push({ firebaseId: doc.id, ...doc.data() });
             });
@@ -301,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("dash-empty").classList.remove("hidden");
             } else {
                 document.getElementById("dash-empty").classList.add("hidden");
-
+                
                 requests.forEach(req => {
                     const tr = document.createElement("tr");
                     tr.className = "border-b dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors";
@@ -343,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     ['dash-search-text', 'dash-filter-cat', 'dash-filter-status', 'dash-filter-type'].forEach(id => {
         const el = document.getElementById(id);
-        if (el) el.addEventListener(el.tagName === 'INPUT' ? 'keyup' : 'change', renderDashboard);
+        if(el) el.addEventListener(el.tagName === 'INPUT' ? 'keyup' : 'change', renderDashboard);
     });
     document.getElementById('btn-clear-filters')?.addEventListener('click', () => {
         document.getElementById("dash-search-text").value = "";
@@ -394,10 +326,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("form-solicitacao").addEventListener("submit", async (e) => {
         e.preventDefault();
         const btn = e.target.querySelector('button');
-
-        if (currentUserData && currentUserData.role === "admin") {
-            alert("Admins não podem criar solicitações.");
-            return;
+        
+        if (currentUserData && currentUserData.role === "admin") { 
+            alert("Admins não podem criar solicitações."); 
+            return; 
         }
 
         try {
@@ -411,7 +343,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 client: currentUserData ? currentUserData.name : document.getElementById("sol-nome").value,
                 email: currentAuthUser.email,
                 category: document.getElementById("sol-pacote").options[document.getElementById("sol-pacote").selectedIndex].text,
-                type: document.getElementById("sol-tipo-obra").value,
+                type: document.getElementById("sol-tipo-obra").value, 
                 status: "Novo",
                 date: new Date().toLocaleDateString("pt-BR"),
                 phone: document.getElementById("sol-telefone").value,
@@ -432,11 +364,43 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.disabled = false;
         }
     });
+    
+    const contactForm = document.querySelector("#page-contato form");
+    if (contactForm) {
+        contactForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const inputs = contactForm.querySelectorAll("input, textarea");
+            const nome = inputs[0].value;
+            const email = inputs[1].value;
+            const mensagem = inputs[2].value;
+            const btn = contactForm.querySelector("button");
+
+            try {
+                btn.innerText = "Enviando...";
+                btn.disabled = true;
+                await addDoc(collection(db, "messages"), {
+                    name: nome,
+                    email: email,
+                    message: mensagem,
+                    date: new Date()
+                });
+                alert("Mensagem enviada com sucesso! Entraremos em contato.");
+                contactForm.reset();
+            } catch (error) {
+                console.error("Erro ao enviar mensagem:", error);
+                alert("Erro ao enviar. Tente novamente.");
+            } finally {
+                btn.innerText = "Enviar";
+                btn.disabled = false;
+            }
+        });
+    }
 
     const showPage = (pageId) => {
         document.querySelectorAll(".page-section").forEach(p => {
             p.style.display = (p.id === pageId) ? "block" : "none";
             if (p.id === pageId) p.classList.add("active");
+            else p.classList.remove("active");
         });
         window.scrollTo(0, 0);
     };
@@ -463,19 +427,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("detalhe-categoria").innerText = dados.categoria;
                 document.getElementById("detalhe-preco").innerText = dados.preco;
                 document.getElementById("detalhe-descricao").innerText = dados.descricao;
-                if (document.getElementById("responsavel")) document.getElementById("responsavel").innerText = dados.responsavel;
+                if(document.getElementById("responsavel")) document.getElementById("responsavel").innerText = dados.responsavel;
                 const imgEl = document.getElementById("detalhe-img");
-                if (imgEl) imgEl.src = dados.img;
+                if(imgEl) imgEl.src = dados.img;
                 document.getElementById("btn-solicitar").href = `#solicitacao/${pacoteId}`;
-
+                
                 const galeriaContainer = document.getElementById("detalhe-galeria");
-                if (galeriaContainer) {
+                if(galeriaContainer) {
                     galeriaContainer.innerHTML = "";
                     dados.galeria.forEach(src => {
                         const img = document.createElement("img");
                         img.src = src;
                         img.className = "h-20 w-full object-cover rounded-lg cursor-pointer hover:opacity-75 border border-gray-200";
-                        img.onclick = () => { if (imgEl) imgEl.src = src; };
+                        img.onclick = () => { if(imgEl) imgEl.src = src; };
                         galeriaContainer.appendChild(img);
                     });
                 }
@@ -512,7 +476,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    document.getElementById("sol-anexos")?.addEventListener("change", function () {
+    document.getElementById("sol-anexos")?.addEventListener("change", function() {
         document.getElementById("file-list").innerText = this.files.length > 0 ? `${this.files.length} arquivo(s)` : "";
     });
 

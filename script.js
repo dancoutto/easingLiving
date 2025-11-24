@@ -56,9 +56,9 @@ const dadosProjetos = {
         preco: "R$ 950.000,00",
         descricao: "Conforto e design em dois pavimentos. Fachada imponente com pé direito duplo e área de lazer completa.",
         responsavel: "Arq. Estela Fontes",
-        img: "assets/ModernTownhouse200m2/modernTownhouseExternal.png",
+        img: "assets/ModernTownhouse200m2/ModernTownhouseExternal.png",
         galeria: [
-            "assets/ModernTownhouse200m2/modernTownhouseExternal.png",
+            "assets/ModernTownhouse200m2/ModernTownhouseExternal.png",
             "assets/ModernTownhouse200m2/ModernTownhouseHall.png",
             "assets/ModernTownhouse200m2/ModernTownhouseRoom.png",
             "assets/ModernTownhouse200m2/ModernTownhouseBathroom.png"
@@ -532,3 +532,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+

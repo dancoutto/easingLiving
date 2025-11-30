@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,50 +28,101 @@
     </script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-background-light dark:bg-background-dark text-primary-light dark:text-primary-dark antialiased transition-colors duration-300">
 
-    <header class="sticky top-0 z-50 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-border-light dark:border-border-dark">
+<body
+    class="bg-background-light dark:bg-background-dark text-primary-light dark:text-primary-dark antialiased transition-colors duration-300">
+
+    <header
+        class="sticky top-0 z-50 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-border-light dark:border-border-dark">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <a href="#home" class="text-2xl font-bold tracking-tight">easing<span class="text-gray-500">Living</span></a>
+                <a href="#home" class="text-2xl font-bold tracking-tight">easing<span
+                        class="text-gray-500">Living</span></a>
 
                 <div class="hidden md:flex md:items-center md:space-x-8">
-                    <a href="#home" class="nav-link text-sm font-medium hover:text-primary-light dark:hover:text-white transition-colors">Home</a>
-                    <a href="#catalogo" class="nav-link text-sm font-medium hover:text-primary-light dark:hover:text-white transition-colors">Catálogo</a>
-                    <a href="#sobre" class="nav-link text-sm font-medium hover:text-primary-light dark:hover:text-white transition-colors">Sobre Nós</a>
-                    <a href="#faq" class="nav-link text-sm font-medium hover:text-primary-light dark:hover:text-white transition-colors">FAQ</a>
-                    <a href="#contato" class="nav-link text-sm font-medium hover:text-primary-light dark:hover:text-white transition-colors">Contato</a>
+                    <a href="#home"
+                        class="nav-link text-sm font-medium hover:text-primary-light dark:hover:text-white transition-colors">Home</a>
+                    <a href="#catalogo"
+                        class="nav-link text-sm font-medium hover:text-primary-light dark:hover:text-white transition-colors">Catálogo</a>
+                    <a href="#sobre"
+                        class="nav-link text-sm font-medium hover:text-primary-light dark:hover:text-white transition-colors">Sobre
+                        Nós</a>
+                    <a href="#faq"
+                        class="nav-link text-sm font-medium hover:text-primary-light dark:hover:text-white transition-colors">FAQ</a>
+                    <a href="#contato"
+                        class="nav-link text-sm font-medium hover:text-primary-light dark:hover:text-white transition-colors">Contato</a>
                 </div>
 
                 <div class="hidden md:flex items-center space-x-4">
-                    <button id="theme-toggle" class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-surface-light dark:hover:bg-surface-dark transition-colors">
-                        <svg id="theme-toggle-light-icon" class="icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg>
-                        <svg id="theme-toggle-dark-icon" class="hidden icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    <button id="theme-toggle"
+                        class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-surface-light dark:hover:bg-surface-dark transition-colors">
+                        <svg id="theme-toggle-light-icon" class="icon" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <svg id="theme-toggle-dark-icon" class="hidden icon" fill="none" stroke="currentColor"
+                            stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                            </path>
                         </svg>
                     </button>
-                    <a id="header-login-link" href="#login" class="px-4 py-2 text-sm font-medium rounded-lg border border-border-light dark:border-border-dark hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Login</a>
-                    <a id="header-account-link" href="#dashboard" class="hidden px-4 py-2 text-sm font-medium rounded-lg border border-border-light dark:border-border-dark hover:bg-gray-50 dark:hover:bg-gray-800">Minha Conta</a>
-                    <button id="header-logout-button" class="hidden px-4 py-2 text-sm font-medium rounded-lg bg-red-50 text-red-600 hover:bg-red-100 transition-colors">Sair</button>
+                    <a id="header-login-link" href="#login"
+                        class="px-4 py-2 text-sm font-medium rounded-lg border border-border-light dark:border-border-dark hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Login</a>
+                    <a id="header-account-link" href="#dashboard"
+                        class="hidden px-4 py-2 text-sm font-medium rounded-lg border border-border-light dark:border-border-dark hover:bg-gray-50 dark:hover:bg-gray-800">Minha
+                        Conta</a>
+                    <button id="header-logout-button"
+                        class="hidden px-4 py-2 text-sm font-medium rounded-lg bg-red-50 text-red-600 hover:bg-red-100 transition-colors">Sair</button>
                 </div>
 
                 <div class="md:hidden flex items-center">
-                     <button id="theme-toggle-mobile" class="p-2 mr-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-surface-light dark:hover:bg-surface-dark transition-colors">
-                        <svg id="theme-toggle-light-icon-mobile" class="icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg>
-                        <svg id="theme-toggle-dark-icon-mobile" class="hidden icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    <button id="theme-toggle-mobile"
+                        class="p-2 mr-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-surface-light dark:hover:bg-surface-dark transition-colors">
+                        <svg id="theme-toggle-light-icon-mobile" class="icon" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <svg id="theme-toggle-dark-icon-mobile" class="hidden icon" fill="none" stroke="currentColor"
+                            stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                            </path>
+                        </svg>
                     </button>
-                    <button id="mobile-menu-button" class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-surface-light dark:hover:bg-surface-dark">
-                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <button id="mobile-menu-button"
+                        class="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-surface-light dark:hover:bg-surface-dark">
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
                     </button>
                 </div>
             </div>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark p-4">
-             <a href="#home" class="block py-2">Home</a>
-             <a href="#catalogo" class="block py-2">Catálogo</a>
-             <a href="#dashboard" id="mobile-account-link" class="hidden block py-2 font-bold">Minha Conta</a>
-             <a href="#login" id="mobile-login-link" class="block py-2 font-bold">Login</a>
-             <button id="mobile-logout-button" class="hidden block py-2 text-red-500 w-full text-left">Sair</button>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark p-4">
+            <a href="#home" class="block py-2 hover:text-primary-light dark:hover:text-white transition-colors">Home</a>
+            <a href="#catalogo"
+                class="block py-2 hover:text-primary-light dark:hover:text-white transition-colors">Catálogo</a>
+
+            <a href="#sobre" class="block py-2 hover:text-primary-light dark:hover:text-white transition-colors">Sobre
+                Nós</a>
+            <a href="#faq" class="block py-2 hover:text-primary-light dark:hover:text-white transition-colors">FAQ</a>
+            <a href="#contato"
+                class="block py-2 hover:text-primary-light dark:hover:text-white transition-colors">Contato</a>
+            <div class="border-t border-gray-200 dark:border-gray-700 my-2 pt-2">
+                <a href="#dashboard" id="mobile-account-link"
+                    class="hidden block py-2 font-bold text-primary-light dark:text-white">Minha Conta</a>
+                <a href="#login" id="mobile-login-link"
+                    class="block py-2 font-bold text-primary-light dark:text-white">Login</a>
+                <button id="mobile-logout-button"
+                    class="hidden block py-2 text-red-500 w-full text-left font-bold">Sair</button>
+            </div>
         </div>
     </header>
 
@@ -78,17 +130,23 @@
 
         <section id="page-home" class="page-section active">
             <div class="text-center pt-10">
-                <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">O projeto da sua casa,<br><span class="text-gray-500 dark:text-gray-400">simplificado.</span></h1>
-                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10">Escolha entre dezenas de projetos de arquitetura premiados. Construa no seu lote ou deixe que encontramos o lugar perfeito para você.</p>
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">O projeto da sua casa,<br><span
+                        class="text-gray-500 dark:text-gray-400">simplificado.</span></h1>
+                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-10">Escolha entre
+                    dezenas de projetos de arquitetura premiados. Construa no seu lote ou deixe que encontramos o lugar
+                    perfeito para você.</p>
                 <a href="#catalogo" class="btn-hero">Ver Catálogo de Projetos</a>
             </div>
             <div class="mt-20">
-                <img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260" class="rounded-xl shadow-2xl object-cover w-full aspect-video" onerror="this.src='https://placehold.co/1200x600'">
+                <img src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260"
+                    class="rounded-xl shadow-2xl object-cover w-full aspect-video"
+                    onerror="this.src='https://placehold.co/1200x600'">
             </div>
         </section>
 
         <section id="page-login" class="page-section">
-            <div class="max-w-md mx-auto bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg mt-10 border border-border-light dark:border-border-dark">
+            <div
+                class="max-w-md mx-auto bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg mt-10 border border-border-light dark:border-border-dark">
                 <h2 class="text-2xl font-bold text-center mb-8">Acesse sua conta</h2>
                 <form class="space-y-6">
                     <div>
@@ -96,24 +154,31 @@
                         <input id="email-login" type="email" required>
                     </div>
                     <div>
-                         <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Senha</label>
-                         <input id="password-login" type="password" required>
+                        <label class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300">Senha</label>
+                        <input id="password-login" type="password" required>
                     </div>
                     <button type="submit" class="btn-primary w-full">Entrar</button>
                 </form>
-                <p class="mt-6 text-center text-sm text-gray-500">Ainda não tem conta? <a href="#cadastro" class="font-bold text-primary-light dark:text-primary-dark hover:underline">Cadastre-se</a></p>
+                <p class="mt-6 text-center text-sm text-gray-500">Ainda não tem conta? <a href="#cadastro"
+                        class="font-bold text-primary-light dark:text-primary-dark hover:underline">Cadastre-se</a></p>
             </div>
         </section>
 
         <section id="page-cadastro" class="page-section">
-             <div class="max-w-lg mx-auto bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg mt-10 border border-border-light dark:border-border-dark">
+            <div
+                class="max-w-lg mx-auto bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg mt-10 border border-border-light dark:border-border-dark">
                 <h2 class="text-2xl font-bold text-center mb-8">Crie sua conta</h2>
                 <form id="form-cadastro" class="space-y-4">
-                    <div><label class="block text-sm font-medium mb-1">Nome Completo</label><input id="nome-cadastro" type="text" required></div>
-                    <div><label class="block text-sm font-medium mb-1">CPF</label><input id="cpf-cadastro" type="text" required></div>
-                    <div><label class="block text-sm font-medium mb-1">E-mail</label><input id="email-cadastro" type="email" required></div>
-                    <div><label class="block text-sm font-medium mb-1">Telefone</label><input id="telefone-cadastro" type="tel" required></div>
-                    <div><label class="block text-sm font-medium mb-1">Endereço</label><input id="endereco-cadastro" type="text" required></div>
+                    <div><label class="block text-sm font-medium mb-1">Nome Completo</label><input id="nome-cadastro"
+                            type="text" required></div>
+                    <div><label class="block text-sm font-medium mb-1">CPF</label><input id="cpf-cadastro" type="text"
+                            required></div>
+                    <div><label class="block text-sm font-medium mb-1">E-mail</label><input id="email-cadastro"
+                            type="email" required></div>
+                    <div><label class="block text-sm font-medium mb-1">Telefone</label><input id="telefone-cadastro"
+                            type="tel" required></div>
+                    <div><label class="block text-sm font-medium mb-1">Endereço</label><input id="endereco-cadastro"
+                            type="text" required></div>
                     <div>
                         <label class="block text-sm font-medium mb-1">Senha</label>
                         <input id="password-cadastro" type="password" minlength="8" required>
@@ -121,62 +186,82 @@
                     </div>
                     <button type="submit" class="btn-primary w-full mt-4">Cadastrar</button>
                 </form>
-                 <p class="mt-6 text-center text-sm text-gray-500">Já tem conta? <a href="#login" class="font-bold text-primary-light dark:text-primary-dark hover:underline">Faça login</a></p>
+                <p class="mt-6 text-center text-sm text-gray-500">Já tem conta? <a href="#login"
+                        class="font-bold text-primary-light dark:text-primary-dark hover:underline">Faça login</a></p>
             </div>
         </section>
 
         <section id="page-catalogo" class="page-section">
             <h2 class="text-3xl font-bold tracking-tight text-center mb-12">Nosso Catálogo</h2>
             <div id="catalogo-filtros" class="mb-10 flex justify-center flex-wrap gap-3">
-                 <button class="filter-btn active-filter" data-filter="all">Todos</button>
-                 <button class="filter-btn" data-filter="padrao">Padrão</button>
-                 <button class="filter-btn" data-filter="medio-alto">Médio-Alto</button>
-                 <button class="filter-btn" data-filter="alto">Alto</button>
-                 <button class="filter-btn" data-filter="excelente">Excelente</button>
+                <button class="filter-btn active-filter" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="padrao">Padrão</button>
+                <button class="filter-btn" data-filter="medio-alto">Médio-Alto</button>
+                <button class="filter-btn" data-filter="alto">Alto</button>
+                <button class="filter-btn" data-filter="excelente">Excelente</button>
             </div>
             <div id="catalogo-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="card-projeto bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300" data-category="padrao">
+                <div class="card-projeto bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+                    data-category="padrao">
                     <div class="h-48 overflow-hidden">
-                        <img src="assets/ContemporaryHouse120m2/contemporaryHouseExternal.png" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x250?text=Casa+Padrão'">
+                        <img src="assets/ContemporaryHouse120m2/contemporaryHouseExternal.png"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                            onerror="this.src='https://placehold.co/400x250?text=Casa+Padrão'">
                     </div>
                     <div class="p-6">
                         <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Padrão</span>
-                        <h3 class="text-xl font-bold my-2 text-primary-light dark:text-white">Casa Contemporânea 120m²</h3>
+                        <h3 class="text-xl font-bold my-2 text-primary-light dark:text-white">Casa Contemporânea 120m²
+                        </h3>
                         <div class="mb-4 font-bold text-lg">A partir de R$ 450.000,00</div>
-                        <a href="#detalhe-pacote/padrao" class="btn-primary w-full text-center block no-underline">Ver Detalhes</a>
+                        <a href="#detalhe-pacote/padrao" class="btn-primary w-full text-center block no-underline">Ver
+                            Detalhes</a>
                     </div>
                 </div>
-                <div class="card-projeto bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300" data-category="medio-alto">
+                <div class="card-projeto bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+                    data-category="medio-alto">
                     <div class="h-48 overflow-hidden">
-                        <img src="assets/ModernTownhouse200m2/modernTownhouseExternal.png" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x250?text=Sobrado'">
+                        <img src="assets/ModernTownhouse200m2/modernTownhouseExternal.png"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                            onerror="this.src='https://placehold.co/400x250?text=Sobrado'">
                     </div>
                     <div class="p-6">
                         <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Médio-Alto</span>
                         <h3 class="text-xl font-bold my-2 text-primary-light dark:text-white">Sobrado Moderno 200m²</h3>
                         <div class="mb-4 font-bold text-lg">A partir de R$ 950.000,00</div>
-                        <a href="#detalhe-pacote/medio-alto" class="btn-primary w-full text-center block no-underline">Ver Detalhes</a>
+                        <a href="#detalhe-pacote/medio-alto"
+                            class="btn-primary w-full text-center block no-underline">Ver Detalhes</a>
                     </div>
                 </div>
-                <div class="card-projeto bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300" data-category="alto">
+                <div class="card-projeto bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+                    data-category="alto">
                     <div class="h-48 overflow-hidden">
-                        <img src="assets/LuxuryResidence350m2/luxuryResidenceExternal.png" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x250?text=Mansão'">
+                        <img src="assets/LuxuryResidence350m2/luxuryResidenceExternal.png"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                            onerror="this.src='https://placehold.co/400x250?text=Mansão'">
                     </div>
                     <div class="p-6">
                         <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Alto Padrão</span>
-                        <h3 class="text-xl font-bold my-2 text-primary-light dark:text-white">Residência de Luxo 350m²</h3>
+                        <h3 class="text-xl font-bold my-2 text-primary-light dark:text-white">Residência de Luxo 350m²
+                        </h3>
                         <div class="mb-4 font-bold text-lg">A partir de R$ 1.950.000,00</div>
-                        <a href="#detalhe-pacote/alto" class="btn-primary w-full text-center block no-underline">Ver Detalhes</a>
+                        <a href="#detalhe-pacote/alto" class="btn-primary w-full text-center block no-underline">Ver
+                            Detalhes</a>
                     </div>
                 </div>
-                <div class="card-projeto bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300" data-category="excelente">
+                <div class="card-projeto bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+                    data-category="excelente">
                     <div class="h-48 overflow-hidden">
-                        <img src="assets/ExclusiveMansion600m2/exclusiveMansionExternal.png" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x250?text=Exclusiva'">
+                        <img src="assets/ExclusiveMansion600m2/exclusiveMansionExternal.png"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                            onerror="this.src='https://placehold.co/400x250?text=Exclusiva'">
                     </div>
                     <div class="p-6">
                         <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Excelente</span>
-                        <h3 class="text-xl font-bold my-2 text-primary-light dark:text-white">Mansão Exclusiva 600m²</h3>
+                        <h3 class="text-xl font-bold my-2 text-primary-light dark:text-white">Mansão Exclusiva 600m²
+                        </h3>
                         <div class="mb-4 font-bold text-lg">A partir de R$ 4.500.000,00</div>
-                        <a href="#detalhe-pacote/excelente" class="btn-primary w-full text-center block no-underline">Ver Detalhes</a>
+                        <a href="#detalhe-pacote/excelente"
+                            class="btn-primary w-full text-center block no-underline">Ver Detalhes</a>
                     </div>
                 </div>
             </div>
@@ -184,35 +269,44 @@
 
         <section id="page-detalhe-pacote" class="page-section">
             <div class="container mx-auto">
-                <button onclick="history.back()" class="text-sm text-gray-500 hover:text-primary-light dark:hover:text-white mb-6 inline-flex items-center transition-colors">
+                <button onclick="history.back()"
+                    class="text-sm text-gray-500 hover:text-primary-light dark:hover:text-white mb-6 inline-flex items-center transition-colors">
                     &larr; Voltar para o Catálogo
                 </button>
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-6">
                     <div>
-                        <h2 id="detalhe-titulo" class="text-3xl md:text-4xl font-bold tracking-tight mb-2">Título do Projeto</h2>
-                        <span id="detalhe-categoria" class="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200">Categoria</span>
+                        <h2 id="detalhe-titulo" class="text-3xl md:text-4xl font-bold tracking-tight mb-2">Título do
+                            Projeto</h2>
+                        <span id="detalhe-categoria"
+                            class="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200">Categoria</span>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div class="lg:col-span-2">
-                        <div class="rounded-xl overflow-hidden shadow-lg bg-gray-200 dark:bg-gray-700 aspect-video mb-4">
+                        <div
+                            class="rounded-xl overflow-hidden shadow-lg bg-gray-200 dark:bg-gray-700 aspect-video mb-4">
                             <img id="detalhe-img" src="" class="w-full h-full object-cover">
                         </div>
                         <div id="detalhe-galeria" class="grid grid-cols-4 gap-4"></div>
                     </div>
                     <div class="lg:col-span-1">
-                        <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-lg sticky top-24 border border-border-light dark:border-border-dark">
-                            <span class="text-sm text-gray-500 uppercase tracking-wide font-semibold">Valor Estimado</span>
-                            <p id="detalhe-preco" class="text-3xl font-bold mb-6 text-primary-light dark:text-primary-dark">R$ 0,00</p>
+                        <div
+                            class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-lg sticky top-24 border border-border-light dark:border-border-dark">
+                            <span class="text-sm text-gray-500 uppercase tracking-wide font-semibold">Valor
+                                Estimado</span>
+                            <p id="detalhe-preco"
+                                class="text-3xl font-bold mb-6 text-primary-light dark:text-primary-dark">R$ 0,00</p>
                             <div class="mb-6">
                                 <h4 class="font-semibold mb-2">Descrição do Projeto</h4>
-                                <p id="detalhe-descricao" class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Descrição...</p>
+                                <p id="detalhe-descricao"
+                                    class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Descrição...</p>
                             </div>
                             <div class="mb-8 pt-4 border-t border-gray-200 dark:border-gray-700">
                                 <p class="text-sm mb-1"><span class="font-semibold">Responsável Técnico:</span></p>
                                 <p id="responsavel" class="text-gray-600 dark:text-gray-400 text-sm">...</p>
                             </div>
-                            <a id="btn-solicitar" href="#" class="btn-primary text-center no-underline w-full">Solicitar Orçamento Agora</a>
+                            <a id="btn-solicitar" href="#" class="btn-primary text-center no-underline w-full">Solicitar
+                                Orçamento Agora</a>
                             <p class="text-xs text-center text-gray-500 mt-4">Orçamento sem compromisso.</p>
                         </div>
                     </div>
@@ -221,20 +315,28 @@
         </section>
 
         <section id="page-solicitacao" class="page-section">
-            <div class="max-w-2xl mx-auto bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg border border-border-light dark:border-border-dark">
+            <div
+                class="max-w-2xl mx-auto bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg border border-border-light dark:border-border-dark">
                 <h2 class="text-3xl font-bold text-center mb-8">Solicitação de Orçamento</h2>
                 <form id="form-solicitacao" class="space-y-6">
                     <fieldset class="space-y-4">
-                        <legend class="text-lg font-semibold mb-4 border-b dark:border-gray-700 pb-2 w-full">Seus Dados</legend>
+                        <legend class="text-lg font-semibold mb-4 border-b dark:border-gray-700 pb-2 w-full">Seus Dados
+                        </legend>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div><label class="block text-sm font-medium mb-1">Nome Completo</label><input id="sol-nome" type="text" required></div>
-                            <div><label class="block text-sm font-medium mb-1">E-mail</label><input id="sol-email" type="email" required></div>
-                            <div class="md:col-span-2"><label class="block text-sm font-medium mb-1">Telefone</label><input id="sol-telefone" type="tel" required></div>
+                            <div><label class="block text-sm font-medium mb-1">Nome Completo</label><input id="sol-nome"
+                                    type="text" required></div>
+                            <div><label class="block text-sm font-medium mb-1">E-mail</label><input id="sol-email"
+                                    type="email" required></div>
+                            <div class="md:col-span-2"><label
+                                    class="block text-sm font-medium mb-1">Telefone</label><input id="sol-telefone"
+                                    type="tel" required></div>
                         </div>
                     </fieldset>
                     <fieldset class="space-y-4">
-                        <legend class="text-lg font-semibold mb-4 border-b dark:border-gray-700 pb-2 w-full">Sobre a Obra</legend>
-                        <div><label class="block text-sm font-medium mb-1">Endereço / Localização</label><input id="sol-endereco" type="text" required></div>
+                        <legend class="text-lg font-semibold mb-4 border-b dark:border-gray-700 pb-2 w-full">Sobre a
+                            Obra</legend>
+                        <div><label class="block text-sm font-medium mb-1">Endereço / Localização</label><input
+                                id="sol-endereco" type="text" required></div>
                         <div><label class="block text-sm font-medium mb-1">Situação do Lote</label>
                             <select id="sol-tipo-obra">
                                 <option value="lote_proprio">Já possuo o lote</option>
@@ -254,34 +356,48 @@
                     <div class="pt-4">
                         <label class="block text-sm font-medium mb-2">Anexos (Documentos do lote, fotos)</label>
                         <div class="flex items-center justify-center w-full">
-                            <label for="sol-anexos" class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                            <label for="sol-anexos"
+                                class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                                 <div class="flex flex-col items-center justify-center pt-5 pb-6">
-                                    <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                                    <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
                                     </svg>
-                                    <p class="text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Clique para enviar</span></p>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400"><span
+                                            class="font-semibold">Clique para enviar</span></p>
                                     <p class="text-xs text-gray-500 dark:text-gray-400">PDF, JPG ou PNG</p>
                                 </div>
                                 <input id="sol-anexos" type="file" class="hidden" multiple />
                             </label>
-                        </div> 
+                        </div>
                         <div id="file-list" class="text-xs text-gray-500 mt-2 text-center h-4"></div>
                     </div>
-                    <button type="submit" class="btn-primary w-full py-3 text-lg shadow-lg mt-4">Concluir Solicitação</button>
+                    <button type="submit" class="btn-primary w-full py-3 text-lg shadow-lg mt-4">Concluir
+                        Solicitação</button>
                 </form>
             </div>
         </section>
 
         <section id="page-conclusao" class="page-section">
-            <div class="max-w-xl mx-auto text-center bg-surface-light dark:bg-surface-dark p-10 rounded-xl shadow-lg mt-10">
-                <div class="mx-auto flex items-center justify-center h-20 w-20 rounded-full bg-green-100 dark:bg-green-900/30 mb-6">
-                    <svg class="h-10 w-10 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <div
+                class="max-w-xl mx-auto text-center bg-surface-light dark:bg-surface-dark p-10 rounded-xl shadow-lg mt-10">
+                <div
+                    class="mx-auto flex items-center justify-center h-20 w-20 rounded-full bg-green-100 dark:bg-green-900/30 mb-6">
+                    <svg class="h-10 w-10 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
                 </div>
                 <h2 class="text-3xl font-bold mb-4 text-gray-800 dark:text-white">Solicitação Recebida!</h2>
-                <p class="mb-8 text-gray-600 dark:text-gray-300">Sua solicitação foi enviada com sucesso. Nossa equipe técnica entrará em contato em até 2 dias úteis.</p>
-                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 inline-block min-w-[300px]">
+                <p class="mb-8 text-gray-600 dark:text-gray-300">Sua solicitação foi enviada com sucesso. Nossa equipe
+                    técnica entrará em contato em até 2 dias úteis.</p>
+                <div
+                    class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-700 inline-block min-w-[300px]">
                     <p class="text-sm text-gray-500 uppercase tracking-wide font-bold mb-2">Número de Protocolo</p>
-                    <p id="protocolo-numero" class="text-3xl font-mono font-bold tracking-wider text-primary-light dark:text-white">...</p>
+                    <p id="protocolo-numero"
+                        class="text-3xl font-mono font-bold tracking-wider text-primary-light dark:text-white">...</p>
                 </div>
                 <div class="mt-10"><a href="#home" class="btn-secondary">Voltar para a Home</a></div>
             </div>
@@ -294,17 +410,21 @@
                     <p id="dash-user-name" class="text-gray-500 dark:text-gray-400 text-sm"></p>
                 </div>
             </div>
-            <div class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-lg border border-border-light dark:border-border-dark">
-                 <div id="admin-controls" class="hidden flex-col gap-4 mb-8 bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+            <div
+                class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl shadow-lg border border-border-light dark:border-border-dark">
+                <div id="admin-controls"
+                    class="hidden flex-col gap-4 mb-8 bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
                     <h4 class="font-semibold text-sm uppercase text-gray-500 tracking-wider">Filtros Avançados</h4>
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                         <div>
                             <label class="block text-xs font-bold mb-1 text-gray-500">Buscar (ID ou Nome)</label>
-                            <input type="text" id="dash-search-text" placeholder="Ex: João ou EL-..." class="p-2 text-sm w-full border rounded dark:bg-gray-700 dark:border-gray-600">
+                            <input type="text" id="dash-search-text" placeholder="Ex: João ou EL-..."
+                                class="p-2 text-sm w-full border rounded dark:bg-gray-700 dark:border-gray-600">
                         </div>
                         <div>
                             <label class="block text-xs font-bold mb-1 text-gray-500">Status</label>
-                            <select id="dash-filter-status" class="p-2 text-sm w-full border rounded dark:bg-gray-700 dark:border-gray-600">
+                            <select id="dash-filter-status"
+                                class="p-2 text-sm w-full border rounded dark:bg-gray-700 dark:border-gray-600">
                                 <option value="all">Todos</option>
                                 <option value="Novo">Novo</option>
                                 <option value="Em Análise">Em Análise</option>
@@ -313,7 +433,8 @@
                         </div>
                         <div>
                             <label class="block text-xs font-bold mb-1 text-gray-500">Categoria da Casa</label>
-                            <select id="dash-filter-cat" class="p-2 text-sm w-full border rounded dark:bg-gray-700 dark:border-gray-600">
+                            <select id="dash-filter-cat"
+                                class="p-2 text-sm w-full border rounded dark:bg-gray-700 dark:border-gray-600">
                                 <option value="all">Todas</option>
                                 <option value="Padrão">Padrão</option>
                                 <option value="Médio-Alto">Médio-Alto</option>
@@ -323,7 +444,8 @@
                         </div>
                         <div>
                             <label class="block text-xs font-bold mb-1 text-gray-500">Tipo de Obra</label>
-                            <select id="dash-filter-type" class="p-2 text-sm w-full border rounded dark:bg-gray-700 dark:border-gray-600">
+                            <select id="dash-filter-type"
+                                class="p-2 text-sm w-full border rounded dark:bg-gray-700 dark:border-gray-600">
                                 <option value="all">Todos</option>
                                 <option value="lote_proprio">Lote Próprio</option>
                                 <option value="lote_empresa">Compra de Lote</option>
@@ -331,27 +453,34 @@
                         </div>
                     </div>
                     <div class="flex justify-end">
-                        <button id="btn-clear-filters" class="text-xs text-red-500 hover:underline">Limpar Filtros</button>
+                        <button id="btn-clear-filters" class="text-xs text-red-500 hover:underline">Limpar
+                            Filtros</button>
                     </div>
-                 </div>
-                 <div class="overflow-x-auto">
-                     <table class="w-full text-left border-collapse">
-                         <thead class="border-b dark:border-gray-700 bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-300 uppercase text-xs tracking-wider">
-                             <tr>
-                                 <th class="p-4">Protocolo</th>
-                                 <th class="p-4">Cliente</th>
-                                 <th class="p-4">Detalhes do Pedido</th>
-                                 <th class="p-4">Status</th>
-                                 <th class="p-4 text-right">Ações</th>
-                             </tr>
-                         </thead>
-                         <tbody id="dash-table-body" class="text-sm divide-y divide-gray-100 dark:divide-gray-700"></tbody>
-                     </table>
-                     <div id="dash-empty" class="hidden flex flex-col items-center justify-center py-12 text-gray-400">
-                         <svg class="w-12 h-12 mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                         <p>Nenhum resultado encontrado para os filtros aplicados.</p>
-                     </div>
-                 </div>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead
+                            class="border-b dark:border-gray-700 bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-300 uppercase text-xs tracking-wider">
+                            <tr>
+                                <th class="p-4">Protocolo</th>
+                                <th class="p-4">Cliente</th>
+                                <th class="p-4">Detalhes do Pedido</th>
+                                <th class="p-4">Status</th>
+                                <th class="p-4 text-right">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dash-table-body" class="text-sm divide-y divide-gray-100 dark:divide-gray-700">
+                        </tbody>
+                    </table>
+                    <div id="dash-empty" class="hidden flex flex-col items-center justify-center py-12 text-gray-400">
+                        <svg class="w-12 h-12 mb-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                        <p>Nenhum resultado encontrado para os filtros aplicados.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -359,30 +488,53 @@
             <div class="max-w-3xl mx-auto text-center">
                 <h2 class="text-4xl font-bold tracking-tight mb-6">Nossa Missão</h2>
                 <p class="text-lg text-gray-600 dark:text-gray-300">
-                    Simplificar e democratizar o acesso à arquitetura de qualidade, transformando o sonho da casa própria em um processo transparente, ágil e prazeroso.
+                    Simplificar e democratizar o acesso à arquitetura de qualidade, transformando o sonho da casa
+                    própria em um processo transparente, ágil e prazeroso.
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-center">
-                <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-light dark:border-border-dark">
-                    <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-300 mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-light dark:border-border-dark">
+                    <div
+                        class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-300 mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Visão</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Ser a principal plataforma digital de projetos residenciais do Brasil, reconhecida pela excelência no design.</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Ser a principal plataforma
+                        digital de projetos residenciais do Brasil, reconhecida pela excelência no design.</p>
                 </div>
-                <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-light dark:border-border-dark">
-                    <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-300 mb-6">
-                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-light dark:border-border-dark">
+                    <div
+                        class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-300 mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Valores</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Transparência absoluta, inovação constante e foco total na satisfação do cliente.</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Transparência absoluta, inovação
+                        constante e foco total na satisfação do cliente.</p>
                 </div>
-                <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-light dark:border-border-dark">
-                    <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-300 mb-6">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-xl shadow-lg hover:-translate-y-2 transition-transform duration-300 border border-border-light dark:border-border-dark">
+                    <div
+                        class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-300 mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Credibilidade</h3>
-                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Mais de 50 arquitetos e engenheiros parceiros com registro ativo (CAU/CREA).</p>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">Mais de 50 arquitetos e
+                        engenheiros parceiros com registro ativo (CAU/CREA).</p>
                 </div>
             </div>
         </section>
@@ -390,44 +542,74 @@
         <section id="page-faq" class="page-section">
             <h2 class="text-3xl font-bold tracking-tight text-center mb-12">Perguntas Frequentes</h2>
             <div class="max-w-3xl mx-auto space-y-4">
-                <details class="bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-sm border border-border-light dark:border-border-dark group cursor-pointer">
+                <details
+                    class="bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-sm border border-border-light dark:border-border-dark group cursor-pointer">
                     <summary class="flex justify-between items-center font-semibold text-lg">
                         Como funciona o processo de compra?
-                        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform duration-200"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </summary>
-                    <div class="mt-4 text-gray-600 dark:text-gray-300 border-t border-gray-200 dark:border-gray-700 pt-4">
-                        <p>É muito simples! 1. Você escolhe o pacote de projeto no nosso catálogo. 2. Preenche o formulário de solicitação. 3. Nossa equipe técnica entra em contato para alinhar detalhes do lote. 4. Iniciamos os ajustes e projetos executivos.</p>
+                    <div
+                        class="mt-4 text-gray-600 dark:text-gray-300 border-t border-gray-200 dark:border-gray-700 pt-4">
+                        <p>É muito simples! 1. Você escolhe o pacote de projeto no nosso catálogo. 2. Preenche o
+                            formulário de solicitação. 3. Nossa equipe técnica entra em contato para alinhar detalhes do
+                            lote. 4. Iniciamos os ajustes e projetos executivos.</p>
                     </div>
                 </details>
-                <details class="bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-sm border border-border-light dark:border-border-dark group cursor-pointer">
+                <details
+                    class="bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-sm border border-border-light dark:border-border-dark group cursor-pointer">
                     <summary class="flex justify-between items-center font-semibold text-lg">
                         Quais são as etapas incluídas?
-                        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform duration-200"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </summary>
-                    <div class="mt-4 text-gray-600 dark:text-gray-300 border-t border-gray-200 dark:border-gray-700 pt-4">
+                    <div
+                        class="mt-4 text-gray-600 dark:text-gray-300 border-t border-gray-200 dark:border-gray-700 pt-4">
                         <ul class="list-disc pl-5 space-y-1">
                             <li><strong>Projeto:</strong> Estudo preliminar, anteprojeto e executivo completo.</li>
                             <li><strong>Aprovações:</strong> Trâmites legais na prefeitura.</li>
-                            <li><strong>Obra:</strong> Orçamento, cronograma e execução completa até a entrega das chaves.</li>
+                            <li><strong>Obra:</strong> Orçamento, cronograma e execução completa até a entrega das
+                                chaves.</li>
                         </ul>
                     </div>
                 </details>
-                <details class="bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-sm border border-border-light dark:border-border-dark group cursor-pointer">
+                <details
+                    class="bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-sm border border-border-light dark:border-border-dark group cursor-pointer">
                     <summary class="flex justify-between items-center font-semibold text-lg">
                         Posso usar meu próprio lote?
-                        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform duration-200"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </summary>
-                    <div class="mt-4 text-gray-600 dark:text-gray-300 border-t border-gray-200 dark:border-gray-700 pt-4">
-                        <p>Sim! A maioria dos nossos clientes já possui lote. Nós adaptamos o projeto escolhido (fundação, insolação, topografia) para o seu terreno específico.</p>
+                    <div
+                        class="mt-4 text-gray-600 dark:text-gray-300 border-t border-gray-200 dark:border-gray-700 pt-4">
+                        <p>Sim! A maioria dos nossos clientes já possui lote. Nós adaptamos o projeto escolhido
+                            (fundação, insolação, topografia) para o seu terreno específico.</p>
                     </div>
                 </details>
-                <details class="bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-sm border border-border-light dark:border-border-dark group cursor-pointer">
+                <details
+                    class="bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-sm border border-border-light dark:border-border-dark group cursor-pointer">
                     <summary class="flex justify-between items-center font-semibold text-lg">
                         O preço exibido é final?
-                        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform duration-200"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
                     </summary>
-                    <div class="mt-4 text-gray-600 dark:text-gray-300 border-t border-gray-200 dark:border-gray-700 pt-4">
-                        <p>O valor é uma <strong>estimativa precisa</strong> baseada no CUB e histórico de obras. O valor final (fechado em contrato) será definido após a escolha dos acabamentos finos e análise de solo do terreno.</p>
+                    <div
+                        class="mt-4 text-gray-600 dark:text-gray-300 border-t border-gray-200 dark:border-gray-700 pt-4">
+                        <p>O valor é uma <strong>estimativa precisa</strong> baseada no CUB e histórico de obras. O
+                            valor final (fechado em contrato) será definido após a escolha dos acabamentos finos e
+                            análise de solo do terreno.</p>
                     </div>
                 </details>
             </div>
@@ -437,31 +619,44 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                 <div>
                     <h2 class="text-3xl font-bold tracking-tight mb-6">Contato Rápido</h2>
-                    <p class="text-gray-600 dark:text-gray-300 mb-8">Tem alguma dúvida específica? Preencha o formulário abaixo e responderemos por e-mail.</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8">Tem alguma dúvida específica? Preencha o formulário
+                        abaixo e responderemos por e-mail.</p>
                     <form class="space-y-6">
                         <div>
                             <label class="block text-sm font-medium mb-2">Nome</label>
                             <input type="text" required>
                         </div>
                         <div>
-                             <label class="block text-sm font-medium mb-2">E-mail</label>
-                             <input type="email" required>
+                            <label class="block text-sm font-medium mb-2">E-mail</label>
+                            <input type="email" required>
                         </div>
                         <div>
-                             <label class="block text-sm font-medium mb-2">Mensagem</label>
-                             <textarea rows="4" required></textarea>
+                            <label class="block text-sm font-medium mb-2">Mensagem</label>
+                            <textarea rows="4" required></textarea>
                         </div>
                         <button class="btn-primary w-full text-lg">Enviar Mensagem</button>
                     </form>
                 </div>
-                <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl shadow-xl border border-border-light dark:border-border-dark text-center sticky top-24">
-                    <div class="mx-auto flex items-center justify-center h-20 w-20 rounded-full bg-green-100 text-green-600 mb-6">
-                         <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2.01A10.03 10.03 0 002 12.05a10.03 10.03 0 0010.04 10.04A10.03 10.03 0 0022.08 12.05c0-5.54-4.5-10.04-10.04-10.04zm0 18.27a8.23 8.23 0 01-8.24-8.24A8.23 8.23 0 0112.04 3.8a8.23 8.23 0 018.24 8.24 8.23 8.23 0 01-8.24 8.24zm4.2-6.05c-.12-.06-1.15-.57-1.33-.63s-.31-.1-.44.1-.5.63-.62.76-.24.15-.44 0a5.1 5.1 0 01-1.49-.92 5.25 5.25 0 01-1.03-1.28c-.1-.15 0-.23.06-.3s.15-.18.23-.27a1.6 1.6 0 00.18-.31.3.3 0 000-.33c0-.12-.44-1.06-.6-1.45s-.32-.33-.44-.33h-.4a.73.73 0 00-.5.23c-.18.18-.68.66-.68 1.62s.7 1.88.8 2.02 1.38 2.1 3.35 2.97c.47.2.84.32 1.12.4.45.13.84.12 1.15-.06.35-.2.56-.5.64-.95.08-.45.04-.84-.02-1.12c-.05-.28-.18-.44-.3-.5z"></path></svg>
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-8 rounded-2xl shadow-xl border border-border-light dark:border-border-dark text-center sticky top-24">
+                    <div
+                        class="mx-auto flex items-center justify-center h-20 w-20 rounded-full bg-green-100 text-green-600 mb-6">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12.04 2.01A10.03 10.03 0 002 12.05a10.03 10.03 0 0010.04 10.04A10.03 10.03 0 0022.08 12.05c0-5.54-4.5-10.04-10.04-10.04zm0 18.27a8.23 8.23 0 01-8.24-8.24A8.23 8.23 0 0112.04 3.8a8.23 8.23 0 018.24 8.24 8.23 8.23 0 01-8.24 8.24zm4.2-6.05c-.12-.06-1.15-.57-1.33-.63s-.31-.1-.44.1-.5.63-.62.76-.24.15-.44 0a5.1 5.1 0 01-1.49-.92 5.25 5.25 0 01-1.03-1.28c-.1-.15 0-.23.06-.3s.15-.18.23-.27a1.6 1.6 0 00.18-.31.3.3 0 000-.33c0-.12-.44-1.06-.6-1.45s-.32-.33-.44-.33h-.4a.73.73 0 00-.5.23c-.18.18-.68.66-.68 1.62s.7 1.88.8 2.02 1.38 2.1 3.35 2.97c.47.2.84.32 1.12.4.45.13.84.12 1.15-.06.35-.2.56-.5.64-.95.08-.45.04-.84-.02-1.12c-.05-.28-.18-.44-.3-.5z">
+                            </path>
+                        </svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Prefere falar agora?</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-8">Nossos consultores estão online para tirar suas dúvidas instantaneamente.</p>
-                    <a href="https://api.whatsapp.com/send?phone=5531999999999" target="_blank" class="inline-flex items-center justify-center w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg transition-colors shadow-lg text-lg">
-                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2.01A10.03 10.03 0 002 12.05a10.03 10.03 0 0010.04 10.04A10.03 10.03 0 0022.08 12.05c0-5.54-4.5-10.04-10.04-10.04zm0 18.27a8.23 8.23 0 01-8.24-8.24A8.23 8.23 0 0112.04 3.8a8.23 8.23 0 018.24 8.24 8.23 8.23 0 01-8.24 8.24zm4.2-6.05c-.12-.06-1.15-.57-1.33-.63s-.31-.1-.44.1-.5.63-.62.76-.24.15-.44 0a5.1 5.1 0 01-1.49-.92 5.25 5.25 0 01-1.03-1.28c-.1-.15 0-.23.06-.3s.15-.18.23-.27a1.6 1.6 0 00.18-.31.3.3 0 000-.33c0-.12-.44-1.06-.6-1.45s-.32-.33-.44-.33h-.4a.73.73 0 00-.5.23c-.18.18-.68.66-.68 1.62s.7 1.88.8 2.02 1.38 2.1 3.35 2.97c.47.2.84.32 1.12.4.45.13.84.12 1.15-.06.35-.2.56-.5.64-.95.08-.45.04-.84-.02-1.12c-.05-.28-.18-.44-.3-.5z"></path></svg>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8">Nossos consultores estão online para tirar suas
+                        dúvidas instantaneamente.</p>
+                    <a href="https://api.whatsapp.com/send?phone=5531999999999" target="_blank"
+                        class="inline-flex items-center justify-center w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg transition-colors shadow-lg text-lg">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12.04 2.01A10.03 10.03 0 002 12.05a10.03 10.03 0 0010.04 10.04A10.03 10.03 0 0022.08 12.05c0-5.54-4.5-10.04-10.04-10.04zm0 18.27a8.23 8.23 0 01-8.24-8.24A8.23 8.23 0 0112.04 3.8a8.23 8.23 0 018.24 8.24 8.23 8.23 0 01-8.24 8.24zm4.2-6.05c-.12-.06-1.15-.57-1.33-.63s-.31-.1-.44.1-.5.63-.62.76-.24.15-.44 0a5.1 5.1 0 01-1.49-.92 5.25 5.25 0 01-1.03-1.28c-.1-.15 0-.23.06-.3s.15-.18.23-.27a1.6 1.6 0 00.18-.31.3.3 0 000-.33c0-.12-.44-1.06-.6-1.45s-.32-.33-.44-.33h-.4a.73.73 0 00-.5.23c-.18.18-.68.66-.68 1.62s.7 1.88.8 2.02 1.38 2.1 3.35 2.97c.47.2.84.32 1.12.4.45.13.84.12 1.15-.06.35-.2.56-.5.64-.95.08-.45.04-.84-.02-1.12c-.05-.28-.18-.44-.3-.5z">
+                            </path>
+                        </svg>
                         Falar no WhatsApp
                     </a>
                     <p class="text-sm text-gray-500 mt-4">Ou ligue: (31) 4004-0000</p>
@@ -470,9 +665,11 @@
         </section>
     </main>
 
-    <footer class="bg-surface-light dark:bg-surface-dark border-t border-border-light dark:border-border-dark mt-auto py-8 text-center">
+    <footer
+        class="bg-surface-light dark:bg-surface-dark border-t border-border-light dark:border-border-dark mt-auto py-8 text-center">
         <p class="text-gray-500 dark:text-gray-400">&copy; 2025 EasingLiving. Aplicação sem fins comerciais.</p><br>
-        <p class="text-gray-500 dark:text-gray-400">Desenvolvido para 'Modelos, métodos e técnicas de engenharia de software' na UNA - Betim por:</p>
+        <p class="text-gray-500 dark:text-gray-400">Desenvolvido para 'Modelos, métodos e técnicas de engenharia de
+            software' na UNA - Betim por:</p>
         <p class="text-gray-500 dark:text-gray-400">Daniel Braga Alves do Couto - 62312771</p>
         <p class="text-gray-500 dark:text-gray-400">Gabriel Mendes Bitencourt - 62321162</p>
         <p class="text-gray-500 dark:text-gray-400">Giovanna Monteiro Rocha - 62320643</p>
@@ -482,7 +679,8 @@
 
     <div id="admin-modal" class="modal-overlay">
         <div class="modal-content relative">
-            <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-xl">&times;</button>
+            <button id="close-modal"
+                class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-xl">&times;</button>
             <h3 class="text-2xl font-bold mb-4">Detalhes da Solicitação</h3>
             <div id="modal-body" class="space-y-3"></div>
         </div>
@@ -490,8 +688,5 @@
 
     <script type="module" src="script.js"></script>
 </body>
+
 </html>
-
-
-
-
